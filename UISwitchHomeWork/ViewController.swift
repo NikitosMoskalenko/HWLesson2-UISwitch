@@ -19,13 +19,6 @@ final class ViewController: UIViewController, UITextFieldDelegate {
     private let loginButton = UIButton()
     private let acceptLabel = UILabel()
     private let acceptSwitch = UISwitch()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.green
-   
-    }
     
 //   MARK: - Private methods
     
@@ -115,6 +108,22 @@ final class ViewController: UIViewController, UITextFieldDelegate {
               }
           }
       }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+         
+        view.backgroundColor = UIColor.green
+        
+        addLoginLabel()
+        addNamedTextField()
+        addPasswordLabel()
+        addPasswordTextField()
+        addLoginLabel()
+        addLoginButton()
+        addAcceptLabel()
+        addSwitchElement()
+    
+     }
     
 }
 

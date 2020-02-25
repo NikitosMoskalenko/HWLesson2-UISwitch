@@ -19,13 +19,6 @@ final class LoginVC: UIViewController {
     private let textFieldRUR = UITextField()
     private let convertButton = UIButton()
     private let resultTextField = UITextField()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.green
-
-    }
         
      enum typeOfCurrency {
          case USD
@@ -103,6 +96,18 @@ final class LoginVC: UIViewController {
         alertController.addAction(alertAction)
         self.present(alertController, animated: true)
     }
+    
+    override func viewDidLoad() {
+          super.viewDidLoad()
+          
+          view.backgroundColor = UIColor.green
+        
+        addUSD()
+        addEUR()
+        addRUB()
+        addConvertButton()
+        addResultTextField()
+      }
     
 //  MARK: - Public methods
     
